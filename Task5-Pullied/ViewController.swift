@@ -9,11 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var text1Field: UITextField!
+    @IBOutlet private var text1Field: UITextField!
     
-    @IBOutlet weak var text2Field: UITextField!
+    @IBOutlet private var text2Field: UITextField!
     
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet private var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         text1Field.keyboardType = .decimalPad
         text2Field.keyboardType = .decimalPad
     }
-    func dialogAlert(message: String) {
+    private func dialogAlert(message: String) {
         let alert = UIAlertController(title: "Task5", message: message, preferredStyle: .alert )
         
         alert.addAction(UIAlertAction(title: "ok", style: .default))
